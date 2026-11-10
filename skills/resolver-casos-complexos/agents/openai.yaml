@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resolver casos complexos"
+  short_description: "Evidências e ações para decisões sob incerteza"
+  default_prompt: "Use $resolver-casos-complexos para confrontar estas evidências e definir a próxima ação verificável."

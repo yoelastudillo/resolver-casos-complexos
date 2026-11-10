@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.env
+.env.*
+private/
+case-data/
+dist/
+.venv/
+.agents/
+.claude/
+skills-lock.json
+

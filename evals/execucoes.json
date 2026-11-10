@@ -1,0 +1,83 @@
+{
+  "versao": "1.0.0",
+  "data": "2026-11-10",
+  "modelo_solicitado": "gpt-6-astra",
+  "esforco_solicitado": "max",
+  "versao_interna_modelo": null,
+  "seed": null,
+  "temperatura": null,
+  "protocolo": "Um contexto novo por execução; nenhuma resposta esperada fornecida ao executor. Critérios aplicados em revisão posterior, sem avaliação cega.",
+  "contexto_comum": "Instruções gerais do ambiente e restrições do cenário. Sem acesso ao histórico do projeto.",
+  "recursos_efetivamente_lidos": "Não foi preservado um rastreamento completo de leituras; o registro identifica a pasta disponibilizada e as saídas, não a adoção de cada instrução.",
+  "execucoes": [
+    {
+      "id": "r01",
+      "caso": "fornecedor",
+      "condicao": "com_skill",
+      "estado": "concluida",
+      "saida": "evals/saidas/fornecedor-com-skill.md",
+      "palavras": 265,
+      "limite_palavras": 280,
+      "ferramentas_permitidas": "Leitura da skill; sem rede, contato, contratação ou gravação."
+    },
+    {
+      "id": "r02",
+      "caso": "fornecedor",
+      "condicao": "sem_skill",
+      "estado": "concluida",
+      "saida": "evals/saidas/fornecedor-sem-skill.md",
+      "palavras": 252,
+      "limite_palavras": 280,
+      "ferramentas_permitidas": "Nenhuma; mesmas fontes no enunciado."
+    },
+    {
+      "id": "r03",
+      "caso": "continuidade",
+      "condicao": "com_skill",
+      "estado": "interrompida",
+      "saida": null,
+      "motivo": "Limite de uso do modelo; nenhuma resposta de tarefa recebida."
+    },
+    {
+      "id": "r04",
+      "caso": "continuidade",
+      "condicao": "sem_skill",
+      "estado": "interrompida",
+      "saida": null,
+      "motivo": "Limite de uso do modelo; nenhuma resposta de tarefa recebida."
+    }
+  ],
+  "instalacao": {
+    "sistema": "Windows",
+    "node": "26.2.0",
+    "skills_cli": "1.8.0",
+    "origem": "Diretório local",
+    "destino": "Projeto temporário; agente codex; --copy --yes",
+    "arquivos_identicos": true,
+    "publicacao_remota_testada": false
+  },
+  "hash_normalizacao": "SHA-256 dos bytes UTF-8 após normalização CRLF para LF",
+  "distribuicao_skill_sha256": {
+    "SKILL.md": "068a7e2e271272df14e402b2f28fcc5cb55bff86b87770bd453fd04b581046bb",
+    "LICENSE": "ef3030fdae4152931ffb65a2b36a6c2b643c1e0b8bccfad27bdf731daa1e1203",
+    "agents/openai.yaml": "4992aebadf947c4409a0e98c5d1896dd9f469f3f68bc12cd8da12eab59b1804c",
+    "assets/registro.md": "e8b4e3bba04a1226e369058de4c3614daf2dc45fc786a3495965cdc34b596cb7",
+    "references/evidencias.md": "b04cda8ea06d81fe4547bb6dffcf22a7a12a3c0a68edf32d56763ca908adf07e",
+    "references/decisoes.md": "719926d1ec65da5681d1896d097185ac70c7770768b4b5cbec6b5e793161f930",
+    "references/continuidade.md": "454d3bae5bc74e9324e7bdcf16854c866f34647c8093fe4005df5b6937e2f622",
+    "references/dados-e-fontes.md": "339135630ee0351aeed67790088d1267351978481b89fc04592188608fb52fe8"
+  },
+  "ensaios_pre_publicacao": {
+    "arquivos_skill_sha256": {
+      "SKILL.md": "0d8ae5443bf38fb11380b17ca3a8659ac9bf5834856f9380bc5c00d9264de944",
+      "LICENSE": "ef3030fdae4152931ffb65a2b36a6c2b643c1e0b8bccfad27bdf731daa1e1203",
+      "agents/openai.yaml": "4992aebadf947c4409a0e98c5d1896dd9f469f3f68bc12cd8da12eab59b1804c",
+      "assets/registro.md": "e8b4e3bba04a1226e369058de4c3614daf2dc45fc786a3495965cdc34b596cb7",
+      "references/evidencias.md": "b04cda8ea06d81fe4547bb6dffcf22a7a12a3c0a68edf32d56763ca908adf07e",
+      "references/decisoes.md": "719926d1ec65da5681d1896d097185ac70c7770768b4b5cbec6b5e793161f930",
+      "references/continuidade.md": "454d3bae5bc74e9324e7bdcf16854c866f34647c8093fe4005df5b6937e2f622",
+      "references/dados-e-fontes.md": "339135630ee0351aeed67790088d1267351978481b89fc04592188608fb52fe8"
+    },
+    "nota": "Os hashes preservam os arquivos usados nos ensaios. A única diferença no pacote publicado é a identificação editorial da versão em SKILL.md; o procedimento não foi alterado e os cenários não foram executados novamente."
+  }
+}
